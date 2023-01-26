@@ -1,0 +1,13 @@
+start_date: 2_days_ago
+end_date: yesterday
+syntax: sql
+paginator: point_in_time # scroll|point_in_time #
+keep_alive: 5
+index: [movies]
+timeout: 60
+batched_reduce_size: 20
+size: 10000
+sort:
+  year:
+    order: asc
+query: "SELECT * FROM movies " #WHERE year > 1984"

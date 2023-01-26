@@ -1,0 +1,11 @@
+pyaml
+requests
+# ruff
+pylint
+black
+coverage
+pytest
+pytest-mock
+boto3
+google-api-python-client
+elasticsearch==8.6.0
