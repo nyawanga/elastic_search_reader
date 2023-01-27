@@ -46,7 +46,7 @@ sort:
 query: "SELECT * FROM movies WHERE year > 1984"
 
 ```
-#### secrets file
+#### Secrets file
 - This is used to authenticate the client has following contents:
 
 ```YAML
