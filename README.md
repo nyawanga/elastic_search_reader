@@ -78,7 +78,7 @@ if you want an easy way to write the data to json file use the writers module li
 
 ```python
    from readers import ElasticSearchReader
-   from writers import ElasticSearchReader
+   from writers import ElasticSearchWriter
 
     READER = ElasticSearchReader(
         creds_filepath=creds_filepath, 
