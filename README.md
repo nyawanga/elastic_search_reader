@@ -6,7 +6,9 @@
 - The reader needs to files passed i.e:
 
 #### Config file
-This has sthe configurations used by the reader to fetch the data as shown below:
+This has the configurations used by the reader to fetch the data as shown below:
+
+- DSL query config
 ```YAML
 start_date: 1_day_ago
 end_date: yesterday
@@ -24,8 +26,11 @@ sort:
     order: asc
 query:
   match_all: {}
+```
 
-in case of SQL Satetments for querying
+- SQL query config
+
+```YAML
 start_date: 2_days_ago
 end_date: yesterday
 syntax: sql
