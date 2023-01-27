@@ -81,8 +81,8 @@ if you want an easy way to write the data to json file use the writers module li
    from writers import ElasticSearchWriter
 
     READER = ElasticSearchReader(
-        creds_filepath=creds_filepath, 
-        config_filepath=config_filepath
+        creds_filepath="creds_filepath", 
+        config_filepath="config_filepath"
     )
 
     LOCAL_WRITER = ElasticSearchWriter(
