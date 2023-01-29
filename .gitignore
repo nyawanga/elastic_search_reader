@@ -371,3 +371,4 @@ PipFile
 **.pyc
 iterator_trial.py
 .coverage
+test-bucket/*
