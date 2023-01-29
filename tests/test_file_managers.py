@@ -17,7 +17,7 @@ class TestFileManagers(BaseTest):
     """Class to Test File Managers Functions"""
 
     json_file = "tests/fixtures/sample_results.json"
-    yml_file = "tests/fixtures/es_configs.yml"
+    yml_file = "tests/fixtures/es_secrets.yml"
     yaml_file = "tests/fixtures/test_yaml_file.yaml"
     wrong_file = "tests/fixtures/test_wrong_file_type.txt"
 
