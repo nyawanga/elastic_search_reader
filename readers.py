@@ -1,6 +1,6 @@
 """ELASTIC SEARCH READER MODULE"""
 # pylint: disable=no-member,too-many-locals,broad-except,too-few-public-methods,import-error,wrong-import-order,arguments-differ
-
+# type: ignore
 
 from typing import List, Dict, Any, Generator, Union
 from elasticsearch import Elasticsearch
@@ -87,14 +87,7 @@ class ElasticSearchReader(BaseReader):
             response = self._query_handler(
                 paginator_engine=paginator_engine, search_params=search_params
             )
-            # idx = 0
-            # idxs = []
-            # for record in response:
-            #     flattened_record = self.nomalize(data_field="_source", data=record)
-            #     dataset.append(flattened_record)
-            #     idx += 1
-            #     idxs.append(idx)
-            # print(max(idxs))
+
             dataset = [
                 self.nomalize(data_field=self.configs["data_field"], data=record)
                 for record in response
