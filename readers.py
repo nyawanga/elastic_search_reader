@@ -5,8 +5,6 @@
 from typing import List, Dict, Any, Generator, Union
 from elasticsearch import Elasticsearch
 
-# from elasticsearch import helpers
-
 from base_readers import BaseReader
 from elastic_search_sdk import (
     ParamsHandlerFactory,
@@ -92,11 +90,11 @@ class ElasticSearchReader(BaseReader):
                 self.nomalize(data_field=self.configs["data_field"], data=record)
                 for record in response
             ]
-
             if not dataset:
                 print("no data for provided configs")
                 self.not_success()
                 continue
+
             self.is_success()
             yield {
                 "date": startdate.replace("-", ""),

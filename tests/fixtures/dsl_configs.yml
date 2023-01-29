@@ -1,0 +1,16 @@
+start_date: "2023-01-29"
+end_date: "2023-01-29"
+syntax: dsl # sql|dsl
+paginator: scroll # scroll|point_in_time #
+index: [movies]
+data_field: _source
+keep_alive: 5
+timeout: 60
+batched_reduce_size: 20
+min_score: 1
+size: 10000
+sort:
+  year:
+    order: asc
+query:
+  match_all: {}
